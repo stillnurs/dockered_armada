@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        Armada
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{%static 'css/slick.css'%}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+</head>
+<body>
+<header class="header-text  container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="header-success">
+                <p >Наша сила в вашем успехе !</p>
+            </div>
+            <div class="ml-auto">
+                <p>
+                    Нужна помощь? Свяжитесь с нашим экспретом
+                </p>
+            </div>
+            <div class="header-number">
+                <a href="tel:">+996 (776) 166-600</a>
+            </div>
+        </div>
+    </div>
+</header>
+<header class="header ">
+    <div class="header-overlay ">
+        <div class="nav-container ">
+            <div class="logo"><a href="{% url 'main_page' %}" src=""><img class="logo" src="{% static 'img/armadalogo.png' %}" alt="logo"></a></div>
+            <div class="nav-wrapper">
+                <ul class="nav">
+                    <li class="nav__item"><a href="{% url 'service_list_url' %}" class="nav__link">Услуги</a></li>
+                    <li class="nav__item"><a href="{% url 'work' %}" class="nav__link">О нас</a></li>
+                    <li class="nav__item"><a href="{% url 'contacts' %}" class="nav__link">Контакты</a></li>
+                    <li class="nav__item"><a href="{% url 'portfolio_panel' %}" class="nav__link">Портфолио</a></li>
+                    <li class="nav__item"><a href="{% url 'production_panel' %}" class="nav__link">Производство</a></li>
+                    <li class="nav__item "><button class="btn nav__link">Скачать прайс</button>
+                    </li>
+                </ul>
+                <div id="menu-togle" class="menu-icon">
+                    <div class="menu-icon-line"></div>
+                </div>
+                <div id="mobile-nav" class="mobile-nav">
+                    <ul class="mobile-nav__list">
+                        <li class="mobile-nav__item"><a href="{% url 'service_list_url' %}" class="mobile-nav__link">Услуги</a></li>
+                        <li class="mobile-nav__item"><a href="{%url 'work' %}" class="mobile-nav__link">О нас</a></li>
+                        <li class="mobile-nav__item"><a href="{% url 'contacts' %}" class="mobile-nav__link">Контакты</a></li>
+                        <li class="mobile-nav__item"><a href="{% url 'portfolio_panel' %}" class="mobile-nav__link">Портфолио</a></li>
+                        <li class="mobile-nav__item"><a href="{% url 'production_panel' %}" class="mobile-nav__link">Производство</a></li>
+                        <li class="mobile-nav__item"><button class="btn nav__link">Скачать прайс</button></li>
+                    </ul>
+                </div>
+            </div>
+             <div class="logos"><a href="{% url 'main_page' %}"><img class ="logos "src="{% static 'img/armadalogo.png' %}" alt="logo"></a></div>
+
+        </div>
+    </div>
+
+    {% block message %}
+
+    {% endblock %}
+
+    {% block content %}
+
+
+    <div class="mobile-content">
+        <div class="intro__media-mobile">
+            <video class="intro__video-mobile" src="{% static '/video/video.mp4' %}" autoplay muted loop></video>
+        </div>
+        <p>Наружная реклама в <br> <span class="bish">Бишкеке</span> </p>
+        <p>Произдводство наружной рекламы
+            и <br> создание проектов под ключ</p>
+        <a href="#client_application"><button class=" btn">Оставить заявку</button></a>
+        <div class="mobile-con-media">
+            <a href="https://wa.me/996507009909"  style="color:white;"><i class="col-xl-12 fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/_armada.kg/?hl=ru"  style="color:white;"><i class="col-xl-12 fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/armadabishkek" style="color:white;"><i class="col-xl-12 fab fa-facebook-square"></i></a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="intro__media">
+            <video class="intro__video" src="{% static '/video/video.mp4' %}" autoplay muted loop></video>
+        </div>
+        <div class="container con-content">
+            <div class="row">
+                <div class="col-xl-8">
+                    <p class="">Наружная реклама
+                        <span class="v v-mobile">в</span> <span class="bish"> Бишкеке </span> </p>
+                    <p class="">Произдводство наружной рекламы
+                        и создание проектов под ключ</p>
+                    <a href="#client_application"><button class="mt-4 btn content-btn">Оставить заявку</button></a>
+                </div>
+                <div class="content-media col-xl-4">
+                    <div class="">
+                        <a href="https://wa.me/996507009909" style="color:white;"><i class="col-xl-12 fab fa-whatsapp" ></i></a>
+                        <a href="https://www.instagram.com/_armada.kg/?hl=ru" style="color:white;"><i class="col-xl-12 fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/armadabishkek" style="color:white;"><i class="col-xl-12 fab fa-facebook-square"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</header>
+<section class="our-services-title">
+    <div class="title">
+            <span class="title-text">
+                Наши услуги
+            </span>
+    </div>
+</section>
+<section class="our-services container">
+
+    <div class="rill">
+        {% for service in services %}
+        <div class="block-1 ">
+            <a href="{% url 'service_list_url' %}"><img src="{{service.image.url}}" alt=""></a>
+            <p>{{service.title}}</p>
+            <p>{{service.text}}</p>
+            <a href="tel:">{{service.phone}}</a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="our-work" >
+    <div class="our-title">
+            <span class="otitle-text">
+                Наши работы
+            </span>
+    </div>
+</section>
+<section class=" pt-5">
+    <div class="container">
+        <div class="row">
+            {% for item in portfolio %}
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="servicess-box">
+                    <a href="{%url 'portfolio_panel' %}"><img src="{{ item.image.url }}"></a>
+                    <p class="servicess_title">{{item.title}}</p>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+</section>
+
+<div class="glry-btn text-center">
+    <button class="text-center btn gallery-btn">
+        <a class="all-works" href="{% url 'portfolio_panel'%}">
+        Все работы</a>
+    </button>
+</div>
+<section class="production-text">
+    <div class="production-title">
+            <span class="ptitle-text">
+                Производство
+            </span>
+    </div>
+</section>
+<section class=" pt-5">
+    <div class="container">
+        <div class="row">
+            {% for item in production %}
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="servicess-box">
+                    <img src="{{ item.image.url }}">
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</section>
+
+<section class="price-text">
+    <div class="price-title">
+            <span class="prtitle-text">
+                Наш прайс
+            </span>
+    </div>
+</section>
+<section>
+    <div class="container pt-5">
+        <div class="row">
+            {% for pr in price %}
+            <div class="col-lg-4 col-md-6 col-sm-12 bprice-1 mb-5">
+                <div class="pricess-box">
+                    <img src="{{ pr.image.url }}" alt="1">
+                </div>
+                <p>{{pr.title}}</p>
+                <p>{{pr.price}} сом</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="text-center download-price">
+        <button class="btn">
+            Скачать прайс
+        </button>
+    </div>
+</section>
+
+<section class="client-text">
+    <div class="client-title">
+            <span class="ctitle-text">
+                Наши клиенты
+            </span>
+    </div>
+</section>
+<section class=" pt-5">
+    <div class="container">
+        <div class="row">
+            {% for item in customer %}
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="nikess-box">
+                    <img src="{{ item.image.url }}">
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</section>
+<section class="crew-text">
+    <div class="crew-title">
+            <span class="crtitle-text">
+                Наша команда
+            </span>
+    </div>
+</section>
+<section class="pt-5">
+    <div class="container">
+        <div class="row">
+            {% for co in command %}
+            <div class="iulya col-lg-3 col-md-6 col-sm-12">
+                <div class="staff-box">
+                    <img src="{{co.image.url}}" alt="person">
+                    <p>{{co.name}}</p>
+                    <p>{{co.profession}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class=" container order" id="client_application">
+    <div class="lend">
+        <p class=" text-center">Оставьте бесплатную заявку</p>
+    </div>
+    <p class="manage text-center">Менеджер по работе с клиентами свяжется с вами и проконсультирует</p>
+</section>
+
+<section class="container form">
+    <form action="." method="post" class="form-stacked" name="message_form">
+
+        <div class="form-dis">
+            <div class="control">
+                {{form.name}}
+            </div>
+            <div class="control">
+                {{form.phone}}
+            </div>
+            <div class="form-btn text-center">
+                <input type="submit" value="Оставить заявку">
+                {% csrf_token %}
+            </div>
+        </div>
+    </form>
+    <div>
+        {%if form.errors %}
+        <div class="alert alert-danger">
+            {{form.errors}}
+        </div>
+        {%endif%}
+    </div>
+</section>
+
+
+{% endblock %}
+
+<footer class="information container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="about-company col-xl-3 col-xl-3 col-sm-3">
+                <p>
+                    О компании
+                </p>
+                <p>
+                   Рекламно-производственная компания Армада существует на рынке с 2009 года.
+                    <br>За это время мы успели выполнить более 30 000 частных заказов.
+                    <br>Для нас всегда в приоритете желание заказчика,
+                    поэтому всегда стараемся улучшить качество обслуживания.
+                </p>
+            </div>
+            <div class="information-links col-xl-3 col-sm-3">
+                <div>
+                    <p>Информация </p>
+                    <div class="information-links1">
+                        <a href="{% url 'service_list_url' %}">Услуги </a>
+                        <a href="{% url 'work' %}"> <br> О нас </a>
+                        <a href="{% url 'contacts' %}"> <br> Контакты</a>
+                        <a href="{% url 'portfolio_panel' %}"> <br> Портфолио </a>
+                        <a href="{% url 'production_panel' %}"> <br> Производство </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="contacts col-xl-3  col-lg-3  col-sm-3">
+                <p>Контактная информация</p>
+                <p>Бишкек, ул. Калык Акиева 66, <br> ТЦ Весна, 3 этаж, офис №37
+                </p>
+                <p><a href="tel:">+996 (776) 166-600</a></p>
+                <p><a href = "mailto:armada.kg@gmail.com">armada.kg@gmail.com</a></p>
+            </div>
+            <div class="social-media col-xl-3 col-lg-3 col-sm-3">
+                <p>Мы в социальных сетях </p>
+                <div class="">
+                    <a href="https://instagram.com">Instagram </a>
+                    <a href="https://facebook.com"> <br> Facebook</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<script src="{% static 'js/burger.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block title%}
+Production
+{% endblock %}
+{% block content %}
+<section class="our-services-title">
+    <div class="title title__main">
+                <span class="title-text">
+                    Производство
+                </span>
+    </div>
+</section>
+<section>
+    <div class="container pt-5">
+        <div class="row">
+            {% for item in production %}
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="servicess-box">
+                    <img src="{{ item.image.url }}">
+                    <p class="servicess_title"></p>
+                </div>
+            </div>
+                            {% endfor %}
+
+        </div>
+    </div>
+
+</section>
+<section class="our-services-title">
+    <div class="title">
+                <span class="title-text">
+                    Оборудование
+                </span>
+    </div>
+</section>
+<div class="production__text container">
+    Сегодня выбор оборудования для полиграфии достигает огромных размеров, но при выборе данной техники,
+    главное ориентироваться не на известные марки и рекламу, а на качество и производительность выбираемой машины.
+    <br>От надежности печатных машин зависит итоговый результат.
+    Получить хорошую продукцию можно только при работе на правильной технике.
+    <br>Мы, рекламно производственная компания Армада на рынке с 2009 года,
+    за это время мы проработали на разном оборудовании, но для нас преимущественно важным всегда было качество.
+</div>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        {% for obj in equipment_carousel %}
+            {% if forloop.first %}
+                <li data-target="#carouselExampleIndicators" data-slide-to="{{forloop.counter0}}" class="active"></li>
+            {% else %}
+                <li data-target="#carouselExampleIndicators" data-slide-to="{{forloop.counter0}}"></li>
+            {% endif %}
+        {% endfor %}
+
+    </ol>
+    <div class="carousel-inner">
+        {% for item in equipment_carousel %}
+            {% if forloop.first %}
+                <div class="carousel-item active">
+            {% else %}
+                <div class="carousel-item">
+            {% endif %}
+            <img class="d-block w-100 h-100 d-inline-block" src="{{ item.image.url}}" style="object-fit:cover;">
+                    <p class="carousel__text">{{item.carousel_text}}</p>
+            </div>
+
+        {% endfor %}
+    </div>
+
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    </div>
+</div>
+<script src="{% static 'js/burger.js' %}"></script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+
+
+{% endblock %}
