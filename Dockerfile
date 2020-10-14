@@ -14,6 +14,7 @@ RUN apk update \
 
 # install dependencies
 RUN pip install --upgrade pip
+RUN apk add jpeg-dev zlib-dev
 COPY ./requirements.txt .
 RUN pip install -r requirements.txt
 
