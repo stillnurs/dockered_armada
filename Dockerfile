@@ -2,7 +2,7 @@
 FROM python:3.8.3-alpine
 
 # set work directory
-WORKDIR /usr/src/dockered_armada
+WORKDIR /usr/src/armada
 
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -18,4 +18,4 @@ COPY ./requirements.txt .
 RUN pip install -r requirements.txt
 
 # copy project
-COPY .. .
+COPY . .
