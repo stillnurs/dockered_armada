@@ -46,6 +46,7 @@ ENV HOME=/home/armada
 ENV ARMADA_HOME=/home/armada/web
 RUN mkdir $ARMADA_HOME
 RUN mkdir $ARMADA_HOME/staticfiles
+RUN mkdir $ARMADA_HOME/mediafiles
 WORKDIR $ARMADA_HOME
 
 # install dependencies

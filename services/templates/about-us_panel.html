@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 
-
 {% load static %}
-
-
-
-
 
 <html lang="ru">
 <head>
@@ -42,10 +37,10 @@
         </div>
     </div>
 </section>
-<header class="header">
-    <div class="header-overlay">
+<header class="header ">
+    <div class="header-overlay ">
         <div class="nav-container ">
-            <a href="{% url 'main_page' %}"><div class="logo "><img src="{% static 'img/logo.png' %}" alt="logo"></div></a>
+            <div class="logo"><a href="{% url 'main_page' %}" src=""><img class="logo" src="{% static 'img/armadalogo.png' %}" alt="logo"></a></div>
             <div class="nav-wrapper">
                 <ul class="nav">
                     <li class="nav__item"><a href="{% url 'service_list_url' %}" class="nav__link">Услуги</a></li>
@@ -53,7 +48,7 @@
                     <li class="nav__item"><a href="{% url 'contacts' %}" class="nav__link">Контакты</a></li>
                     <li class="nav__item"><a href="{% url 'portfolio_panel' %}" class="nav__link">Портфолио</a></li>
                     <li class="nav__item"><a href="{% url 'production_panel' %}" class="nav__link">Производство</a></li>
-                    <li class="nav__item "><button href="#" class="btn nav__link">Скачать прайс</button>
+                    <li class="nav__item "><button class="btn nav__link">Скачать прайс</button>
                     </li>
                 </ul>
                 <div id="menu-togle" class="menu-icon">
@@ -66,170 +61,171 @@
                         <li class="mobile-nav__item"><a href="{% url 'contacts' %}" class="mobile-nav__link">Контакты</a></li>
                         <li class="mobile-nav__item"><a href="{% url 'portfolio_panel' %}" class="mobile-nav__link">Портфолио</a></li>
                         <li class="mobile-nav__item"><a href="{% url 'production_panel' %}" class="mobile-nav__link">Производство</a></li>
-                        <li class="mobile-nav__item"><button href="#" class="btn nav__link">Скачать прайс</button></li>
+                        <li class="mobile-nav__item"><button class="btn nav__link">Скачать прайс</button></li>
                     </ul>
                 </div>
-
             </div>
-            <a href="{% url 'main_page' %}"> <div class="logos"><img src="{% static 'img/logo.png' %}" alt="logo"></div></a>
+            <div class="logos"><a href="{% url 'main_page' %}"><img class ="logos "src="{% static 'img/armadalogo.png' %}" alt="logo"></a></div>
         </div>
     </div>
-    <section>
-        <div class=" work__section container">
-            <img src="{% static 'img/production/Rectangle 141.jpg' %}" alt="" class="work__img">
-        </div>
-        <section class="our-services-title">
-            <div class="title title__work">
+</header>
+
+<section>
+    <div class=" work__section container">
+        <img src="{% static 'img/production/Rectangle 141.jpg' %}" alt="" class="work__img">
+    </div>
+    <section class="our-services-title">
+        <div class="title title__work">
 <span class="title-text title__text-work">
 О компании
 </span>
-            </div>
-        </section>
-        <div class="text__work-full container">
-            <p class="text__work">
-                Рекламно-производственная компания Армада существует на рынке с 2009 года.
-                <br>За это время мы успели выполнить более 30 000 частных заказов. <br>
-                Для нас всегда в приоритете желание заказчика, поэтому всегда стараемся улучшить качество обслуживания.
-                <br><br>Мы оказываем большинство полиграфических услуг от печати простых визиток, листовок,
-                буклетов до широкоформатной печати. Также занимаемся постпечатной обработкой изданий,
-                документации и дизайнерским оформлением ваших проектов.
-            </p>
         </div>
     </section>
-    <section class="our-services-title">
-        <div class="title">
+    <div class="text__work-full container">
+        <p class="text__work">
+            Рекламно-производственная компания Армада существует на рынке с 2009 года.
+            <br>За это время мы успели выполнить более 30 000 частных заказов. <br>
+            Для нас всегда в приоритете желание заказчика, поэтому всегда стараемся улучшить качество обслуживания.
+            <br><br>Мы оказываем большинство полиграфических услуг от печати простых визиток, листовок,
+            буклетов до широкоформатной печати. Также занимаемся постпечатной обработкой изданий,
+            документации и дизайнерским оформлением ваших проектов.
+        </p>
+    </div>
+</section>
+<section class="our-services-title">
+    <div class="title">
 <span class="title-text">
 Чем мы занимаемся ?
 </span>
-        </div>
-    </section>
-    <section class="our-services container mb-5">
+    </div>
+</section>
+<section class="our-services container mb-5">
 
-        <div class="rill">
-            {% for service in services %}
-            <div class="block-1 ">
-                <img src="{{service.image.url}}" alt="">
-                <p>{{service.title}}</p>
-                <p>Хотите узнать подробность, <br>
-                    телефон для связи:</p>
-                <a href="#">+996 (0553) 577-575</a>
-            </div>
-            {% endfor %}
+    <div class="rill">
+        {% for service in services %}
+        <div class="block-1 ">
+            <img src="{{service.image.url}}" alt="">
+            <p>{{service.title}}</p>
+            <p>Хотите узнать подробность, <br>
+                телефон для связи:</p>
+            <a href="#">+996 (0553) 577-575</a>
         </div>
-    </section>
-    <section>
-        <div class="slider__section container">
-            <div class="slider__title-text">Наша история</div>
-            <div class="slider container">
-                <div class="slider__item">
-                    <div class="slider__ellipse">
-                        <h1 class="slider__text">2009</h1>
-                    </div>
-                    <p>Мы маленькая, но очень амбициозная компания! Держитесь, мы взлетаем!</p>
+        {% endfor %}
+    </div>
+</section>
+<section>
+    <div class="slider__section container">
+        <div class="slider__title-text">Наша история</div>
+        <div class="slider container">
+            <div class="slider__item">
+                <div class="slider__ellipse">
+                    <h1 class="slider__text">2009</h1>
                 </div>
-                <div class="slider__item">
-                    <div class="slider__ellipse">
-                        <h1 class="slider__text">2010</h1>
-                    </div>
-                    <p>Закупили новое оборудование для производства широкоформатной печати.</p>
+                <p>Мы маленькая, но очень амбициозная компания! Держитесь, мы взлетаем!</p>
+            </div>
+            <div class="slider__item">
+                <div class="slider__ellipse">
+                    <h1 class="slider__text">2010</h1>
                 </div>
-                <div class="slider__item">
-                    <div class="slider__ellipse">
-                        <h1 class="slider__text">2011</h1>
-                    </div>
-                    <p>Увеличиваем производство. Теперь у нас в штате на двух человек больше!</p>
+                <p>Закупили новое оборудование для производства широкоформатной печати.</p>
+            </div>
+            <div class="slider__item">
+                <div class="slider__ellipse">
+                    <h1 class="slider__text">2011</h1>
                 </div>
-                <div class="slider__item">
-                    <div class="slider__ellipse">
-                        <h1 class="slider__text">2012</h1>
-                    </div>
-                    <p>Заключаем договор с крупным гипермаркетом «Фрунзе».
-                        Занимаемся брендированием старых и новых объектов.</p>
+                <p>Увеличиваем производство. Теперь у нас в штате на двух человек больше!</p>
+            </div>
+            <div class="slider__item">
+                <div class="slider__ellipse">
+                    <h1 class="slider__text">2012</h1>
                 </div>
-                <div class="slider__item">
-                    <div class="slider__ellipse">
-                        <h1 class="slider__text">2013</h1>
-                    </div>
-                    <p>Новый год! Новые вершины! Мы сделали подарочные упаковки для компании «Coca-Cola».</p>
+                <p>Заключаем договор с крупным гипермаркетом «Фрунзе».
+                    Занимаемся брендированием старых и новых объектов.</p>
+            </div>
+            <div class="slider__item">
+                <div class="slider__ellipse">
+                    <h1 class="slider__text">2013</h1>
                 </div>
-                <div class="slider__item">
-                    <div class="slider__ellipse">
-                        <h1 class="slider__text">2014</h1>
-                    </div>
-                    <p>Увеличиваем мощности! Сервис и качество превыше всего.
-                        Мы очень рады видеть как бизнес наших клиентов идёт в гору!</p>
+                <p>Новый год! Новые вершины! Мы сделали подарочные упаковки для компании «Coca-Cola».</p>
+            </div>
+            <div class="slider__item">
+                <div class="slider__ellipse">
+                    <h1 class="slider__text">2014</h1>
                 </div>
-                <div class="slider__item">
-                    <div class="slider__ellipse">
-                        <h1 class="slider__text">2015</h1>
-                    </div>
-                    <p>Мы уже побывали по всех городах Кыргызстана. Наши работы повсюду.
-                        Мы улучшаем сервис и наши работы. Побывали во многих городах Китая, и набрались знаниий!</p>
+                <p>Увеличиваем мощности! Сервис и качество превыше всего.
+                    Мы очень рады видеть как бизнес наших клиентов идёт в гору!</p>
+            </div>
+            <div class="slider__item">
+                <div class="slider__ellipse">
+                    <h1 class="slider__text">2015</h1>
                 </div>
-                <div class="slider__item">
-                    <div class="slider__ellipse">
-                        <h1 class="slider__text">2016</h1>
-                    </div>
-                    <p>Мы объездили еще много городов и стран, набираемся опыта и знаний.
-                        Улучшаем дизайн и качество наших работ.</p>
+                <p>Мы уже побывали по всех городах Кыргызстана. Наши работы повсюду.
+                    Мы улучшаем сервис и наши работы. Побывали во многих городах Китая, и набрались знаниий!</p>
+            </div>
+            <div class="slider__item">
+                <div class="slider__ellipse">
+                    <h1 class="slider__text">2016</h1>
                 </div>
-                <div class="slider__item">
-                    <div class="slider__ellipse">
-                        <h1 class="slider__text">2017</h1>
-                    </div>
-                    <p>Главное в бизнесе это – люди.
-                        Наши сотрудники полны опыта и знаний, а самое главное, не стоят на месте и обучаются новому!</p>
+                <p>Мы объездили еще много городов и стран, набираемся опыта и знаний.
+                    Улучшаем дизайн и качество наших работ.</p>
+            </div>
+            <div class="slider__item">
+                <div class="slider__ellipse">
+                    <h1 class="slider__text">2017</h1>
                 </div>
-                <div class="slider__item">
-                    <div class="slider__ellipse">
-                        <h1 class="slider__text">2018</h1>
-                    </div>
-                    <p>Мы в Америке! Новые планы, новые цели!</p>
+                <p>Главное в бизнесе это – люди.
+                    Наши сотрудники полны опыта и знаний, а самое главное, не стоят на месте и обучаются новому!</p>
+            </div>
+            <div class="slider__item">
+                <div class="slider__ellipse">
+                    <h1 class="slider__text">2018</h1>
                 </div>
-                <div class="slider__item">
-                    <div class="slider__ellipse">
-                        <h1 class="slider__text">2019</h1>
-                    </div>
-                    <p>Мы запустили собственное производство ландшафтных светильников! В Кыргызстане мы первые!</p>
+                <p>Мы в Америке! Новые планы, новые цели!</p>
+            </div>
+            <div class="slider__item">
+                <div class="slider__ellipse">
+                    <h1 class="slider__text">2019</h1>
                 </div>
-                <div class="slider__item">
-                    <div class="slider__ellipse">
-                        <h1 class="slider__text">2020</h1>
-                    </div>
-                    <p>Этот год был нелегким для всего мира. Но, мы выдержали, и благодаря нашему труду и сервису
+                <p>Мы запустили собственное производство ландшафтных светильников! В Кыргызстане мы первые!</p>
+            </div>
+            <div class="slider__item">
+                <div class="slider__ellipse">
+                    <h1 class="slider__text">2020</h1>
+                </div>
+                <p>Этот год был нелегким для всего мира. Но, мы выдержали, и благодаря нашему труду и сервису
                     за все эти годы, наши постоянные клиенты были с нами! Мы всё так же вкладываемся в свои знания и
                     и упорно трудимся ради вас!</p>
-                </div>
             </div>
         </div>
-    </section>
-    <section>
-        <div class="advantages">
-            <div class="title">
+    </div>
+</section>
+<section>
+    <div class="advantages">
+        <div class="title">
 <span class="title-advantages">
 Наши преимущества
 </span>
-            </div>
         </div>
-        <div class="advant__items container">
-            <div class="advant__item">
-                <img src="{% static 'img/services/clock 2.png' %}" alt="" class="advant__img">
-                <p class="advant__text">Оперативность</p>
-            </div>
-            <div class="advant__item">
-                <img src="{% static 'img/services/book.png' %}" alt="" class="advant__img">
-                <p class="advant__text">Высококвалифицированные специалисты</p>
-            </div>
-            <div class="advant__item">
-                <img src="{% static 'img/services/Vector (20).png' %}" alt="" class="advant__img">
-                <p class="advant__text">Современное оборудование</p>
-            </div>
-            <div class="advant__item">
-                <img src="{% static 'img/services/Group (2).png' %}" alt="" class="advant__img">
-                <p class="advant__text">Широкий спектр услуг</p>
-            </div>
+    </div>
+    <div class="advant__items container">
+        <div class="advant__item">
+            <img src="{% static 'img/services/clock 2.png' %}" alt="" class="advant__img">
+            <p class="advant__text">Оперативность</p>
         </div>
-    </section>
+        <div class="advant__item">
+            <img src="{% static 'img/services/book.png' %}" alt="" class="advant__img">
+            <p class="advant__text">Высококвалифицированные специалисты</p>
+        </div>
+        <div class="advant__item">
+            <img src="{% static 'img/services/Vector (20).png' %}" alt="" class="advant__img">
+            <p class="advant__text">Современное оборудование</p>
+        </div>
+        <div class="advant__item">
+            <img src="{% static 'img/services/Group (2).png' %}" alt="" class="advant__img">
+            <p class="advant__text">Широкий спектр услуг</p>
+        </div>
+    </div>
+</section>
 </header>
 <section class="client-text">
     <div class="client-title">
@@ -291,7 +287,7 @@
                     О компании
                 </p>
                 <p>
-                   Рекламно-производственная компания Армада существует на рынке с 2009 года.
+                    Рекламно-производственная компания Армада существует на рынке с 2009 года.
                     <br>За это время мы успели выполнить более 30 000 частных заказов.
                     <br>Для нас всегда в приоритете желание заказчика,
                     поэтому всегда стараемся улучшить качество обслуживания.

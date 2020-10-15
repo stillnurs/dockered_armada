@@ -37,10 +37,10 @@
         </div>
     </div>
 </section>
-<header class="header">
-    <div class="header-overlay">
+<header class="header ">
+    <div class="header-overlay ">
         <div class="nav-container ">
-            <a href="{% url 'main_page' %}"><div class="logo "><img src="{% static 'img/logo.png' %}" alt="logo"></div></a>
+            <div class="logo"><a href="{% url 'main_page' %}" src=""><img class="logo" src="{% static 'img/armadalogo.png' %}" alt="logo"></a></div>
             <div class="nav-wrapper">
                 <ul class="nav">
                     <li class="nav__item"><a href="{% url 'service_list_url' %}" class="nav__link">Услуги</a></li>
@@ -48,7 +48,7 @@
                     <li class="nav__item"><a href="{% url 'contacts' %}" class="nav__link">Контакты</a></li>
                     <li class="nav__item"><a href="{% url 'portfolio_panel' %}" class="nav__link">Портфолио</a></li>
                     <li class="nav__item"><a href="{% url 'production_panel' %}" class="nav__link">Производство</a></li>
-                    <li class="nav__item "><button href="#" class="btn nav__link">Скачать прайс</button>
+                    <li class="nav__item "><button class="btn nav__link">Скачать прайс</button>
                     </li>
                 </ul>
                 <div id="menu-togle" class="menu-icon">
@@ -57,19 +57,18 @@
                 <div id="mobile-nav" class="mobile-nav">
                     <ul class="mobile-nav__list">
                         <li class="mobile-nav__item"><a href="{% url 'service_list_url' %}" class="mobile-nav__link">Услуги</a></li>
-                        <li class="mobile-nav__item"><a href="{% url 'work' %}" class="mobile-nav__link">О нас</a></li>
+                        <li class="mobile-nav__item"><a href="{%url 'work' %}" class="mobile-nav__link">О нас</a></li>
                         <li class="mobile-nav__item"><a href="{% url 'contacts' %}" class="mobile-nav__link">Контакты</a></li>
                         <li class="mobile-nav__item"><a href="{% url 'portfolio_panel' %}" class="mobile-nav__link">Портфолио</a></li>
                         <li class="mobile-nav__item"><a href="{% url 'production_panel' %}" class="mobile-nav__link">Производство</a></li>
-                        <li class="mobile-nav__item"><button href="#" class="btn nav__link">Скачать прайс</button></li>
+                        <li class="mobile-nav__item"><button class="btn nav__link">Скачать прайс</button></li>
                     </ul>
                 </div>
-
             </div>
-            <a href="{% url 'main_page' %}"> <div class="logos"><img src="{% static 'img/logo.png' %}" alt="logo"></div></a>
+             <div class="logos"><a href="{% url 'main_page' %}"><img class ="logos "src="{% static 'img/armadalogo.png' %}" alt="logo"></a></div>
         </div>
     </div>
-</header>
+</header></header>
 
 
 <section class="our-services-title">
