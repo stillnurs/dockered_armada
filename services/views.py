@@ -1,10 +1,8 @@
 from django.conf import settings
-from django.contrib import messages
 from django.core.mail import send_mail
 from django.shortcuts import render, get_object_or_404
 from .models import *
 from .forms import ContactClientForm
-from django.contrib import messages
 
 
 # Главная страница
@@ -71,7 +69,7 @@ def service_list(request):
 
 # Вкалдка "Услуги"
 def service_panel(request, item_slug):
-    category=get_object_or_404(ServiceListCategory, slug=item_slug)
+    category = get_object_or_404(ServiceListCategory, slug=item_slug)
     panel_items = ServicePanel.objects.filter(category=category)
     if request.method == 'POST':
         form = ContactClientForm(request.POST)

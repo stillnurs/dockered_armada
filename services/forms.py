@@ -16,5 +16,3 @@ class ContactClientForm(forms.ModelForm):
             'phone': forms.TextInput(attrs={'class': "messages", 'id': "Телефон",
                                             'placeholder': "Введите ваш номер телефона"}),
         }
-
-

@@ -9,6 +9,9 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
+import os
+from pathlib import Path
+from . import local_settings
 from .email_info import *
 
 EMAIL_USE_TLS = EMAIL_USE_TLS
@@ -17,9 +20,6 @@ EMAIL_HOST_USER = EMAIL_HOST_USER
 EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD
 EMAIL_PORT = EMAIL_PORT
 
-import os
-from pathlib import Path
-from . import local_settings
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -96,14 +96,14 @@ DATABASES = {
     #     'HOST': 'localhost',
     #     'PORT': 5432
     # }
-        "default": {
-            "ENGINE": os.environ.get("SQL_ENGINE", "django.db.backends.postgresql_psycopg2"),
-            "NAME": os.environ.get("SQL_DATABASE", os.path.join(BASE_DIR, "armada_db")),
-            "USER": os.environ.get("SQL_USER", "armada_user"),
-            "PASSWORD": os.environ.get("SQL_PASSWORD", local_settings.DB_PASSWORD),
-            "HOST": os.environ.get("SQL_HOST", "localhost"),
-            "PORT": os.environ.get("SQL_PORT", "5432"),
-        }
+    "default": {
+        "ENGINE": os.environ.get("SQL_ENGINE", "django.db.backends.postgresql_psycopg2"),
+        "NAME": os.environ.get("SQL_DATABASE", os.path.join(BASE_DIR, "armada_db")),
+        "USER": os.environ.get("SQL_USER", "armada_user"),
+        "PASSWORD": os.environ.get("SQL_PASSWORD", local_settings.DB_PASSWORD),
+        "HOST": os.environ.get("SQL_HOST", "localhost"),
+        "PORT": os.environ.get("SQL_PORT", "5432"),
+    }
 }
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
@@ -148,4 +148,3 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-

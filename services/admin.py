@@ -56,7 +56,7 @@ class ContactClientAdmin(admin.ModelAdmin):
 
 @admin.register(Work)
 class WorkAdmin(admin.ModelAdmin):
-    list_display = ['body', 'title',]
+    list_display = ['body', 'title']
 
 
 @admin.register(Equipment)
