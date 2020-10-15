@@ -21,6 +21,7 @@ $ docker-compose up -d
 ```
 $ docker images  #list of created images
 ```
+```
 Options:
   -a, --all             Show all images (default hides intermediate images)
       --digests         Show digests
@@ -28,11 +29,12 @@ Options:
       --format string   Pretty-print images using a Go template
       --no-trunc        Don't truncate output
   -q, --quiet           Only show numeric IDs
-  
+```
+
 ```
 $ docker ps      #list of active containers
 ```
-
+```
 Options:
   -a, --all             Show all containers (default shows just running)
   -f, --filter filter   Filter output based on conditions provided
@@ -42,7 +44,7 @@ Options:
       --no-trunc        Don't truncate output
   -q, --quiet           Only display numeric IDs
   -s, --size            Display total file sizes
-
+```
 
 
 #### To drop Docker containers:
@@ -50,12 +52,12 @@ Options:
 ```
 $ docker rm [OPTIONS] CONTAINER [CONTAINER...]
 ```
-
+```
 Options:
   -f, --force     Force the removal of a running container (uses SIGKILL)
   -l, --link      Remove the specified link
   -v, --volumes   Remove anonymous volumes associated with the container
-
+```
 
 
 #### To drop Docker images:
@@ -75,7 +77,7 @@ Options:
 ```
 $ docker-compose down [options]
 ```
-
+```
 By default, the only things removed are:
 
 - Containers for services defined in the Compose file
@@ -95,7 +97,7 @@ Options:
     -t, --timeout TIMEOUT   Specify a shutdown timeout in seconds.
                             (default: 10)
 
-
+```
 
 
 
@@ -104,10 +106,10 @@ Options:
 ```
 $ docker stop [OPTIONS] CONTAINER [CONTAINER...]
 ```
-
+```
  Options:
   -t, --time int   Seconds to wait for stop before killing it (default 10)
-
+```
 
 
 #### To start container back:
@@ -115,14 +117,14 @@ $ docker stop [OPTIONS] CONTAINER [CONTAINER...]
 ```
 $ docker start [OPTIONS] CONTAINER [CONTAINER...]
 ```
-
+```
 Options:
   -a, --attach                  Attach STDOUT/STDERR and forward signals
       --checkpoint string       Restore from this checkpoint
       --checkpoint-dir string   Use a custom checkpoint storage directory
       --detach-keys string      Override the key sequence for detaching a container
   -i, --interactive             Attach container's STDIN
-
+```
 
 
 
@@ -131,10 +133,10 @@ Options:
 ```
 $ docker restart [OPTIONS] CONTAINER [CONTAINER...]
 ```
-
+```
 Options:
   -t, --time int   Seconds to wait for stop before killing the container (default 10)
-
+```
 
 
 
