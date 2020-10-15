@@ -3,11 +3,11 @@
 
 
 
-###### After cloning the project,
+#### After cloning the project,
 
 
 
-###### To run the project using Docker:
+#### To run the project using Docker:
 
 ```
 $ docker-compose up --build
@@ -16,7 +16,7 @@ $ docker-compose up -d
 
 
 
-###### Some useful commands to check status of your images and containers:
+#### Some useful commands to check status of your images and containers:
 
 ```
 $ docker images  #list of created images
@@ -45,7 +45,7 @@ Options:
 
 
 
-###### To drop Docker containers:
+#### To drop Docker containers:
 
 ```
 $ docker rm [OPTIONS] CONTAINER [CONTAINER...]
@@ -58,7 +58,7 @@ Options:
 
 
 
-###### To drop Docker images:
+#### To drop Docker images:
 
 ```
 $ docker rmi [OPTIONS] IMAGE [IMAGE...]
@@ -70,7 +70,7 @@ Options:
       
 
 
-###### To stop and remove containers created by using `up` :
+#### To stop and remove containers created by using `up` :
 
 ```
 $ docker-compose down [options]
@@ -99,7 +99,7 @@ Options:
 
 
 
-###### To stop active container:
+#### To stop active container:
 
 ```
 $ docker stop [OPTIONS] CONTAINER [CONTAINER...]
@@ -110,7 +110,7 @@ $ docker stop [OPTIONS] CONTAINER [CONTAINER...]
 
 
 
-###### To start container back:
+#### To start container back:
 
 ```
 $ docker start [OPTIONS] CONTAINER [CONTAINER...]
@@ -126,7 +126,7 @@ Options:
 
 
 
-###### To restart container:
+#### To restart container:
 
 ```
 $ docker restart [OPTIONS] CONTAINER [CONTAINER...]
@@ -138,7 +138,7 @@ Options:
 
 
 
-###### To enter the application interactively using `bash` console:
+#### To enter the application interactively using `bash` console:
 
 ```
 $ docker exec -it [CONTAINER ID] bash
